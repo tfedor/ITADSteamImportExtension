@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "version": "0.1",
+  "name": "IsThereAnyDeal's Steam Sync",
+  "short_name": "Steam Sync",
+
+  "author": "Tomáš Fedor",
+  "description": "",
+  "homepage_url": "https://isthereanydeal.com/",
+
+  "incognito": "not_allowed",
+
+  "background": {
+    "scripts": [
+      "core.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "exclude_matches": ["*://store.steampowered.com/cart/*", "*://store.steampowered.com/account/*"],
+      "matches": ["*://store.steampowered.com/*"],
+      "js": ["steam.js"],
+      "css": ["steam.css"]
+    }
+  ],
+  "permissions": [
+    "*://dev.isthereanydeal.com/*",
+    "*://isthereanydeal.com/*",
+    "*://api.isthereanydeal.com/*",
+    "*://store.steampowered.com/dynamicstore/userdata/*",
+    "storage",
+    "webRequest"
+  ]
+
+}
