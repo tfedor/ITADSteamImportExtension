@@ -12,14 +12,23 @@
 
   "background": {
     "scripts": [
-      "core.js"
+      "server/api.js",
+      "server/plains.js",
+      "server/waitlist.js",
+      "server/collection.js",
+      "server/server.js"
     ]
   },
   "content_scripts": [
     {
       "exclude_matches": ["*://store.steampowered.com/cart/*", "*://store.steampowered.com/account/*"],
       "matches": ["*://store.steampowered.com/*"],
-      "js": ["steam.js"],
+      "js": [
+        "client/api.js",
+        "client/uri.js",
+        "client/user.js",
+        "client/steam.js"
+      ],
       "css": ["steam.css"]
     }
   ],
@@ -31,5 +40,4 @@
     "storage",
     "webRequest"
   ]
-
 }
