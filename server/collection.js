@@ -23,7 +23,8 @@ if (!ITAD || !ITAD.Collection) {
                             return {
                                 "plain": plain,
                                 "title": plain, //TODO
-                                "copies": [{"type": "steam"}]
+                                "copies": [{"type": "steam"}],
+                                "owned": 1
                             }
                         })
                     })
